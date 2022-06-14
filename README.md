@@ -11,7 +11,7 @@ How to use:
 4. Enter the Client ID and Client Secret from the app created on the Spotify developer website. Click submit.
 5. Enter the song and artist that it is by to get similar song recommendations. Click submit. You can click submit again to cycle through more recommendations or you can change the song and artist for recommendations based on other songs.
 
-<img src="/similar-song-finder/assets/screenshot1.png">
-<img src="/similar-song-finder/assets/screenshot2.png">
-<img src="/similar-song-finder/assets/screenshot3.png">
-<img src="/similar-song-finder/assets/screenshot4.png">
+<img src="screenshot1.png">
+<img src="screenshot2.png">
+<img src="screenshot3.png">
+<img src="screenshot4.png">

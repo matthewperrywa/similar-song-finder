@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Similar Song Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="keywords" content="similar song finder,Spotify API,song recommendations">
+    <meta name="description" content="Enter 1 song to get 30 recommendations.">
+    <meta name="author" content="Matthew Perry">
+</head>
+<body>
+    <h1>Similar Song Finder</h1>
+    <p>Enter 1 song to get 30 recommendations.</p>
+    <form>
+        <label>Client ID</label>
+        <input type="text" id="enterClientID">
+        <label>Client Secret</label>
+        <input type="password" id="enterClientSecret">
+        <button id="clientButton" type="button" onclick="login()">Submit</button>
+        <br><br>
+        <label>Artist</label>
+        <input type="text" id="enterArtist">
+        <label>Song</label>
+        <input type="text" id="enterSong">
+        <button disabled id="submitButton" type="button" onclick="buttonPressed()">Submit</button>
+    </form>
+    <br>
+    <ul id="songList"></ul>
+    <script src="index.js"></script>
+</body>
+</html>

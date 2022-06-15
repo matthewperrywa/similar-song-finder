@@ -15,3 +15,5 @@ How to use:
 6. Enter the Redirect URI, Client ID, and Client Secret from the app you just created on the Spotify developer website. Click submit.
 7. You will be asked to authorize your Spotify account. Click "AGREE". You will then be redirected back to the main page, but this time, the artist and song submit button will be clickable.
 8. Enter the song and the artist that it is by to get similar song recommendations. Click submit. You can click submit again to cycle through more recommendations or you can change the song and artist for recommendations based on other songs.
+
+If the song you are entering is in the Spotify databse, but it is not being recognized, make sure the song and artist names are formatted exactly as they are in Spotify. If the song is still not being recognized, try removing the punctuation marks in the artist or song name.

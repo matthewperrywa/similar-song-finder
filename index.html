@@ -13,10 +13,13 @@
     <meta name="description" content="Enter 1 song to get 30 recommendations.">
     <meta name="author" content="Matthew Perry">
 </head>
-<body>
+<body onload="onPageLoad()">
     <h1>Similar Song Finder</h1>
     <p>Enter 1 song to get 30 recommendations.</p>
     <form>
+        <label>Redirect URI</label>
+        <input type="text" id="enterRedirectURI">
+        <br><br>
         <label>Client ID</label>
         <input type="text" id="enterClientID">
         <label>Client Secret</label>

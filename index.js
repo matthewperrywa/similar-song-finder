@@ -1,3 +1,4 @@
+var redirect_uri = "";
 var client_id = "";
 var client_secret = "";
 var access_token = null;
@@ -13,10 +14,30 @@ let count = 0;
  * Post-Condition: If there are query parameters in the url, a redirect is handled.
  */
 function onPageLoad(){
+    redirect_uri = localStorage.getItem("redirect_uri");
+    client_id = localStorage.getItem("client_id");
+    client_secret = localStorage.getItem("client_secret");
+
     // calls a redirect if there are query parameters in the url
     if(window.location.search.length > 0){
         handleRedirect();
     }
+}
+
+/**
+ * Description: Requests authorization from the user's Spotify account.
+ * Post-Condition: Opens a window asking the user to authorize access to their Spotify account.
+ */
+function requestAuthorization(){
+    localStorage.setItem("redirect_uri", redirect_uri)
+    localStorage.setItem("client_id", client_id);
+    localStorage.setItem("client_secret", client_secret);
+    let url = AUTHORIZE;
+    url += "?client_id=" + client_id;
+    url += "&response_type=code";
+    url += "&redirect_uri=" + encodeURI(redirect_uri);
+    url += "&show_dialog=true";
+    window.location.href = url;
 }
 
 /**
@@ -26,6 +47,7 @@ function onPageLoad(){
 function handleRedirect(){
     let code = getCode();
     fetchAccessToken(code);
+    window.history.pushState("", "", redirect_uri);
 }
 
 /**
@@ -49,6 +71,7 @@ function getCode(){
 function fetchAccessToken(code){
     let body = "grant_type=authorization_code";
     body += "&code=" + code;
+    body += "&redirect_uri=" + encodeURI(redirect_uri);
     body += "&client_id=" + client_id;
     body += "&client_secret=" + client_secret;
     callAuthorizationApi(body);
@@ -89,7 +112,7 @@ function handleAuthorizationResponse(){
     // authorization is unsuccessful
     else{
         document.getElementById("submitButton").disabled = true;
-        alert("Invalid Client ID and/or Client Secret.");
+        alert("Invalid Client Secret.");
     }
 }
 
@@ -167,9 +190,10 @@ function buttonPressed(){
  *                 If the entered credentials are invalid, an alert will appear.
  */
 function login(){
+    redirect_uri = document.getElementById("enterRedirectURI").value;
     client_id = document.getElementById("enterClientID").value;
     client_secret = document.getElementById("enterClientSecret").value;
-    refreshAccessToken();
+    requestAuthorization();
 }
 
 /**

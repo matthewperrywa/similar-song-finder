@@ -13,5 +13,5 @@ How to use:
 4. Type https://matthewperrywa.github.io/similar-song-finder/ into "Redirect URIs". Click "ADD" and then click "SAVE".
 5. Go to https://matthewperrywa.github.io/similar-song-finder/.
 6. Enter the Redirect URI, Client ID, and Client Secret from the app you just created on the Spotify developer website. Click submit.
-7. You will be asked to authorize your Spotify account. Click "AGREE". You will be redirected back to the main page, but this time, the artist and song submit button will be clickable.
-8. Enter the song and artist that it is by to get similar song recommendations. Click submit. You can click submit again to cycle through more recommendations or you can change the song and artist for recommendations based on other songs.
+7. You will be asked to authorize your Spotify account. Click "AGREE". You will then be redirected back to the main page, but this time, the artist and song submit button will be clickable.
+8. Enter the song and the artist that it is by to get similar song recommendations. Click submit. You can click submit again to cycle through more recommendations or you can change the song and artist for recommendations based on other songs.

@@ -38,4 +38,8 @@ ul{
 }
 button{
     font-family: Roboto, sans-serif;
+    cursor: pointer;
 }
+button:disabled {
+    cursor: not-allowed;
+  }

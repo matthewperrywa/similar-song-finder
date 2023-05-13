@@ -112,7 +112,7 @@ function handleAuthorizationResponse(){
     // authorization is unsuccessful
     else{
         document.getElementById("submitButton").disabled = true;
-        alert("Invalid Client Secret.");
+        alert("Failed to sign in. You must click AGREE for the sign in to work.");
     }
 }
 
@@ -190,9 +190,11 @@ function buttonPressed(){
  *                 If the entered credentials are invalid, an alert will appear.
  */
 function login(){
-    redirect_uri = document.getElementById("enterRedirectURI").value;
-    client_id = document.getElementById("enterClientID").value;
-    client_secret = document.getElementById("enterClientSecret").value;
+    redirect_uri = "https://matthewperrywa.github.io/similar-song-finder/";
+    client_id = "07a9400ad65da20926243d20d5e757b1";
+    client_secret = "932cbe54cde8d10bbca4a3263598a3c2";
+    client_id = client_id.split("").reverse().join("");
+    client_secret = client_secret.split("").reverse().join("");
     requestAuthorization();
 }
 

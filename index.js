@@ -157,9 +157,8 @@ function getTrackResponse(){
         refreshAccessToken();
         getTrack();
     }
-    // user account is not Premium
     else if(this.status == 403){
-        alert("Request unsuccessful. You must have a Spotify Premium account to use this website.");
+        alert("In development mode. You must have developer access to use this website.");
     }
     // unexpected error. searches for track again
     else{
@@ -227,9 +226,8 @@ function getRecommendationsResponse(){
         refreshAccessToken();
         getRecommendations();
     }
-    // user account is not Premium
     else if(this.status == 403){
-        alert("Request unsuccessful. You must have a Spotify Premium account to use this website.");
+        alert("In development mode. You must have developer access to use this website.");
     }
     // error. either track has not been found yet or it does not exist
     else{
